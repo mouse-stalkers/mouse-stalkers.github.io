@@ -65,10 +65,8 @@ function Stalker(targetStream) {
     return {x: newX, y: newY};
   }
 
-  var self = this;
-
   var ps = new Bacon.Bus();
-  self.positionStream = ps.skipDuplicates();
+  this.positionStream = ps.skipDuplicates();
 
   animationFrame.onValue(function() {
     if (initialized) {
@@ -83,8 +81,8 @@ function Stalker(targetStream) {
 var mouseCursorStream =
   Bacon.fromEventTarget(document, 'mousemove').map(function(me) {
     return {
-      x: me.clientX,
-      y: me.clientY
+      x: me.pageX,
+      y: me.pageY
     };
   });
 

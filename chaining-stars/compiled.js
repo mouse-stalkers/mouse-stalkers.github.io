@@ -3921,7 +3921,7 @@ var mouseCursorStream =
     };
   });
 
-module.exports = function() {
+exports.start = function() {
   var cur = new Stalker(mouseCursorStream);
   for (var i = 0; i < 30; i++) {
     cur = new Stalker(cur.positionStream.delay(100));

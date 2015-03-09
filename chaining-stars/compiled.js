@@ -87,7 +87,12 @@ var mouseCursorStream =
   });
 
 exports.start = function() {
-  var cur = new Stalker(mouseCursorStream);
+  var cur = new Stalker(mouseCursorStream.map(function(p) {
+    return {
+      x: p.x + 30,
+      y: p.y + 30,
+    };
+  }));
   for (var i = 0; i < 30; i++) {
     cur = new Stalker(cur.positionStream.delay(100));
   }

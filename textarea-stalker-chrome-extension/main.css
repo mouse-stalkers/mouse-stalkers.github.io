@@ -1,0 +1,36 @@
+body {
+    background-color: #e9e7e4;
+    margin: 0px;
+}
+
+#ms_ufo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
+}
+
+textarea {
+    min-width: 200px;
+    min-height: 80px;
+    font-size: 12pt;
+    font-family: roboto;
+    outline: 0;
+    cursor: pointer;
+}
+
+h2 {
+    margin-left: 30px;
+}

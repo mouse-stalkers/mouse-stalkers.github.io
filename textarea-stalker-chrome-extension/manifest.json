@@ -1,0 +1,15 @@
+{
+  "name": "textarea-stalker-chrome-extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "textarea-mouse-stalker-chrome-extension",
+  "icons": { "128": "e128.png" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["main.css"],
+      "js": ["main.js"]
+    }
+  ],
+  "permissions": ["http://*/*", "https://*/*"]
+}
